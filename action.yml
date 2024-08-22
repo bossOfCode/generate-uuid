@@ -1,0 +1,15 @@
+name: 'Download and install scratchattach'
+description: 'downloads and installs scratchattach from pip'
+branding:
+  icon: arrow-down-circle
+  color: black
+runs:
+  using: "composite"
+  steps:
+    - name: Update pip
+      run: python3 -m pip install --upgrade pip
+      shell: bash
+
+    - name: install scratchattach
+      run: pip install -U scratchattach
+      shell: bash
