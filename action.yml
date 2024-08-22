@@ -1,8 +1,8 @@
-name: 'Download and install scratchattach'
-description: 'downloads and installs scratchattach from pip'
+name: 'Generate UUID'
+description: 'Generates a UUID using the uuid module in python'
 branding:
-  icon: arrow-down-circle
-  color: black
+  icon: 
+  color: 
 runs:
   using: "composite"
   steps:
