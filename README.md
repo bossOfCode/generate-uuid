@@ -1,14 +1,14 @@
-## Generate UUID
+# Generate UUID
 Generates a random UUID using the `uuid` module in python.
 
-# Inputs
+## Inputs
 * `version` - Version of UUID to generate. Versions are 1 to 8.
 > Note: Version 1 may pose a safety risk because it uses your network info.
 
-# Outputs
+## Outputs
 * `uuid` - The generated UUID
 
-# Usage
+## Usage
 ```yaml
 - uses: actions/checkout@v5
 - uses: bossOfCode/generate-uuid@v1 #Use current version
