@@ -3,9 +3,9 @@ import os
 import sys
 import uuid
 
-VERSION = os.environ.get("INPUTS_VERSION")
-namespace = os.environ.get("INPUTS_NAMESPACE")
-name = os.environ.get("INPUTS_NAME")
+VERSION = os.environ.get("INPUT_VERSION")
+namespace = os.environ.get("INPUT_NAMESPACE")
+name = os.environ.get("INPUT_NAME")
 
 OUTPUT = ""
 VERSION = getattr(uuid, f"uuid{VERSION}")
