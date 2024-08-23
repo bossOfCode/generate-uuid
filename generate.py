@@ -18,6 +18,8 @@ def print_in_os(argument):
     print(f"{argument}")
     os.system(f"{argument}")
 
+print_in_os(f"Version: {VERSION}")
+
 if VERSION in versions or namespace in namespaces:
     OUTPUT = str(VERSION())
 else:
@@ -29,8 +31,8 @@ else:
 
 SAFE = uuid.SafeUUID
 
-print_in_os(f"echo 'uuid={str(OUTPUT)}' >> $GITHUB_OUTPUT")
-print_in_os(f"echo 'safe={SAFE}' >> $GITHUB_OUTPUT")
+print_in_os(f"echo 'uuid={OUTPUT}' >> $GITHUB_OUTPUT")
+print_in_os(f"echo 'safe={str(SAFE)}' >> $GITHUB_OUTPUT")
 
 if SAFE == "unsafe":
     print_in_os("::warning title=UNSAFE::Your UUID may be unsafe for public use because" +
