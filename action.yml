@@ -24,6 +24,16 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - name: install scratchattach
-      run: pip install -U scratchattach
+    - name: Push local vars to env
+      run: |
+        echo "INPUT_VERSION=${{ inputs.version }}" >> $GITHUB_ENV
+        echo "INPUT_NAMESPACE=${{ inputs.namespace }}" >> $GITHUB_ENV
+        echo "INPUT_NAME=${{ inputs.name }}" >> $GITHUB_ENV
+      shell: bash
+
+    - name: Generate UUID
+      id: generate
+      run: |
+        pip install --upgrade pip
+        python3 generate.py
       shell: bash
