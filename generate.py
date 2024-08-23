@@ -29,7 +29,7 @@ else:
 
 SAFE = uuid.SafeUUID
 
-print_in_os(f"echo 'uuid={OUTPUT}' >> $GITHUB_OUTPUT")
+print_in_os(f"echo 'uuid={str(OUTPUT)}' >> $GITHUB_OUTPUT")
 print_in_os(f"echo 'safe={SAFE}' >> $GITHUB_OUTPUT")
 
 if SAFE == "unsafe":
