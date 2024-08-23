@@ -14,11 +14,16 @@ inputs:
   name:
     description: "Name to use to create a UUID. Only applies to UUID versions 3 and 5."
     required: false
-    
+outputs:
+  uuid:
+    description: "The generated UUID"
+    value: ${{ steps.generate.outputs.uuid }}
+  safe:
+    description: "The safeness of the UUID"
+    value: ${{ steps.generate.outputs.safe }}
 runs:
   using: "composite"
   steps:
-
     - name: install scratchattach
       run: pip install -U scratchattach
       shell: bash
