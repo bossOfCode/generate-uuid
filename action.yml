@@ -37,3 +37,8 @@ runs:
         pip install --upgrade pip
         python3 generate.py
       shell: bash
+
+    - name: Print UUID
+      id: print
+      run: |
+        echo Generated UUID $uuid
