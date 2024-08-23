@@ -1,6 +1,8 @@
 # Generate UUID
 Generates a random UUID using the `uuid` module in python.
 
+[![test](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml/badge.svg)](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml)
+
 ## Inputs
 * `version` - REQIURED - Version of UUID to generate. Versions are 1, 3, 4, and 5.
 > Note: Version 1 may pose a safety risk because it uses your network info.
