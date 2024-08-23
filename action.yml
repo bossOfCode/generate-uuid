@@ -36,9 +36,5 @@ runs:
       run: |
         pip install --upgrade pip
         python3 generate.py
+        echo "Generated UUID ${{ steps.generate.outputs.uuid }}"
       shell: bash
-
-    - name: Print UUID
-      id: print
-      run: |
-        echo "Generated UUID {steps.generate.outputs.uuid}"
