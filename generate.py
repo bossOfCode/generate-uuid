@@ -38,8 +38,8 @@ else:
 FINAL = str(output)
 SAFE = uuid.SafeUUID
 
-print_in_os(f"::uuid={FINAL}::")
-print_in_os(f"::safe={SAFE}::")
+print_in_os(f"echo 'uuid={FINAL}' >> $GITHUB_OUTPUT")
+print_in_os(f"echo 'safe={SAFE}' >> $GITHUB_OUTPUT")
 
 if SAFE != "safe":
     print_in_os("::warning title=UNSAFE::Your UUID may be unsafe for public use because" +
