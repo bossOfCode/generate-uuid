@@ -18,17 +18,7 @@ def print_in_os(argument):
     os.system(f"{argument}")
 
 if VERSION in versions or namespace in namespaces:
-    if VERSION == 1:
-        OUTPUT = str(uuid.uuid1())
-    else:
-        if VERSION == 3:
-            OUTPUT = str(uuid.uuid3(str("NAMESPACES_" + namespace), name))
-        else:
-            if VERSION == 4:
-                OUTPUT = str(uuid.uuid4())
-            else:
-                if VERSION == 5:
-                    OUTPUT = str(uuid.uuid5(str("NAMESPACES_" + namespace), name))
+        OUTPUT = str(uuid.uuid{VERSION}())
 else:
     if namespace in namespaces:
         sys.exit(f"ERROR: namespace cannot be {namespace}; must be either DNS, URL, OID, or X500.")
