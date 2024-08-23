@@ -8,8 +8,9 @@ namespace = os.environ.get("INPUTS_NAMESPACE")
 name = os.environ.get("INPUTS_NAME")
 
 OUTPUT = ""
+VERSION = getattr(uuid, "uuid+VERSION")
 
-versions = [1, 3, 4, 5]
+versions = ["uuid1", "uuid3", "uuid4", "uuid5"]
 namespaces = ["DNS", "URL", "OID", "X500"]
 
 def print_in_os(argument):
@@ -18,7 +19,7 @@ def print_in_os(argument):
     os.system(f"{argument}")
 
 if VERSION in versions or namespace in namespaces:
-        OUTPUT = str(uuid.uuid{VERSION}())
+    OUTPUT = str(VERSION())
 else:
     if namespace in namespaces:
         sys.exit(f"ERROR: namespace cannot be {namespace}; must be either DNS, URL, OID, or X500.")
