@@ -1,14 +1,23 @@
 name: 'Generate UUID'
 description: 'Generates a UUID using the uuid module in python'
 branding:
-  icon: 
-  color: 
+  icon: archive
+  color: red
+inputs:
+  version:
+    description: 'Version of UUID to use'
+    required: true
+    default: 4
+  namespace:
+    description: "The UUID's namespace. Only applies to UUID versions 3 and 5."
+    required: false
+  name:
+    description: "Name to use to create a UUID. Only applies to UUID versions 3 and 5."
+    required: false
+    
 runs:
   using: "composite"
   steps:
-    - name: Update pip
-      run: python3 -m pip install --upgrade pip
-      shell: bash
 
     - name: install scratchattach
       run: pip install -U scratchattach
