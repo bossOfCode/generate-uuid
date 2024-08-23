@@ -41,8 +41,6 @@ SAFE = uuid.SafeUUID
 print_in_os(f"echo 'uuid={FINAL}' >> $GITHUB_OUTPUT")
 print_in_os(f"echo 'safe={SAFE}' >> $GITHUB_OUTPUT")
 
-if SAFE != "safe":
+if SAFE == "unsafe":
     print_in_os("::warning title=UNSAFE::Your UUID may be unsafe for public use because" +
                 " it may contain some of your device's personal info.")
-
-print_in_os(f"Generated UUID {FINAL}")
