@@ -41,6 +41,7 @@ jobs:
         python-version: 3.12.5
 
     - name: test uuid generator
+      id: generate
       uses: bossOfCode/generate-uuid@v1.0-beta
       with:
         version: ${{ inputs.version }}
