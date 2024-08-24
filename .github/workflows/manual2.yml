@@ -46,5 +46,6 @@ jobs:
         version: ${{ inputs.version }}
 
     - name: Print UUID
-      run: |
-        echo ${{ steps.generate.ouputs.uuid }}
+      env:
+        UUID: ${{ steps.generate.ouputs.uuid }}
+      run: echo $UUID
