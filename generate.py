@@ -24,10 +24,10 @@ if VERSION in versions or namespace in namespaces:
     OUTPUT = UUIDTYP()
 else:
     if not namespace in namespaces:
-       raise valueError(f"ERROR: namespace cannot be {namespace}; must be either DNS, URL, OID, or X500.")
+       raise ValueError(f"ERROR: namespace cannot be {namespace}; must be either DNS, URL, OID, or X500.")
     else:
         if not VERSION in versions:
-            raise valueError(f"ERROR: VERSION {VERSION} does not exist")
+            raise ValueError(f"ERROR: VERSION {VERSION} does not exist")
 
 OUTPUTSTR = str(OUTPUT)
 FINAL = uuid.UUID(OUTPUTSTR)
