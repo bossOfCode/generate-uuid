@@ -47,4 +47,4 @@ jobs:
         version: ${{ inputs.version }}
 
     - name: Print UUID
-      run: echo ${{ steps.uuid.ouputs.uuid }}
+      run: echo ${{ steps.uuid.outputs.uuid }}
