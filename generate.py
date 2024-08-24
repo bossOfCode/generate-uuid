@@ -10,7 +10,7 @@ name = os.environ.get("INPUT_NAME")
 UUIDTYP = getattr(uuid, f"uuid{VERSION}")
 OUTPUT = ""
 
-versions = ["uuid1", "uuid3", "uuid4", "uuid5"]
+versions = ["1", "3", "4", "5"]
 namespaces = ["DNS", "URL", "OID", "X500"]
 
 def print_in_os(argument):
