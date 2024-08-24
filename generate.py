@@ -8,7 +8,7 @@ namespace = os.environ.get("INPUT_NAMESPACE")
 name = os.environ.get("INPUT_NAME")
 
 OUTPUT = ""
-VERSION = getattr(uuid, f"uuid{VERSION}")
+VERSION = str(getattr(uuid, f"uuid{VERSION}"))
 
 versions = ["uuid1", "uuid3", "uuid4", "uuid5"]
 namespaces = ["DNS", "URL", "OID", "X500"]
