@@ -41,12 +41,10 @@ jobs:
         python-version: 3.12.5
 
     - name: test uuid generator
-      id: generate
+      id: uuid
       uses: bossOfCode/generate-uuid@v1.0-beta
       with:
         version: ${{ inputs.version }}
 
     - name: Print UUID
-      env:
-        UUID: ${{ steps.generate.ouputs.uuid }}
-      run: echo $UUID
+      run: echo ${{ steps.uuid.ouputs.uuid }}
