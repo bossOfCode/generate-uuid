@@ -7,7 +7,8 @@ VERSION = os.environ.get("INPUT_VERSION")
 namespace = os.environ.get("INPUT_NAMESPACE")
 name = os.environ.get("INPUT_NAME")
 
-VERSION = getattr(uuid, f"uuid{VERSION}")
+UUIDTYP = getattr(uuid, f"uuid{VERSION}")
+OUTPUT = ""
 
 versions = ["uuid1", "uuid3", "uuid4", "uuid5"]
 namespaces = ["DNS", "URL", "OID", "X500"]
@@ -20,7 +21,7 @@ def print_in_os(argument):
 print_in_os(f"Version: {VERSION}")
 
 if VERSION in versions or namespace in namespaces:
-    OUTPUT = VERSION()
+    OUTPUT = UUIDTYP()
 else:
     if namespace in namespaces:
         sys.exit(f"ERROR: namespace cannot be {namespace}; must be either DNS, URL, OID, or X500.")
