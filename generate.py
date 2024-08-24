@@ -31,7 +31,7 @@ else:
 
 OUTPUTSTR = str(OUTPUT)
 FINAL = uuid.UUID(OUTPUTSTR)
-SAFE = str(uuid.SafeUUID)
+SAFE = str(uuid.UUID.is_safe)
 
 print_in_os(f"echo 'uuid={FINAL}' >> $GITHUB_OUTPUT")
 print_in_os(f"echo 'safe={SAFE}' >> $GITHUB_OUTPUT")
