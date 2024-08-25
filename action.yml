@@ -35,5 +35,5 @@ runs:
       id: generate
       run: |
         pip install --upgrade pip
-        python3 generate.py
+        python3 src/generate.py
       shell: bash
