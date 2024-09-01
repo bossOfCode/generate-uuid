@@ -31,9 +31,18 @@ runs:
         echo "INPUT_NAME=${{ inputs.name }}" >> $GITHUB_ENV
       shell: bash
 
+    - name: checkout this repo
+      uses: actions/checkout@v4.1.7
+      with:
+        repository: bossOfCode/generate-uuid
+
     - name: Generate UUID
       id: generate
       run: |
         pip install --upgrade pip
-        python3 src/generate.py
+        if [ ${{ inputs.version }} == 7 ]
+          python3 src/generate7.py
+        else
+          python3 src/generate.py
+        fi
       shell: bash
