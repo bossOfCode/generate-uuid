@@ -29,3 +29,6 @@ uuid = uuid + next + '-'
 
 next = hex.token_hex(6)
 uuid = uuid + next
+
+print_in_os(f"echo 'uuid={uuid}' >> $GITHUB_OUTPUT")
+print_in_os(f"echo 'safe=safe' >> $GITHUB_OUTPUT")
