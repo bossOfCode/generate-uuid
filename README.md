@@ -2,7 +2,7 @@
 
 Generates a random UUID using the `uuid` module in python.
 
-[![test](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml/badge.svg)](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml) [![test2](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual2.yml/badge.svg)](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual2.yml)
+[![test](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml/badge.svg)](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual.yml) [![test2](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual2.yml/badge.svg)](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual2.yml) [![test for v1.1](https://github.com/bossOfCode/generate-uuid/actions/workflows/manual3.yaml/badge.svg)]
 
 ## Inputs
 
