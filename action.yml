@@ -41,6 +41,7 @@ runs:
       run: |
         pip install --upgrade pip
         if [ ${{ inputs.version }} == 7 ]
+        then
           python3 src/generate7.py
         else
           python3 src/generate.py
