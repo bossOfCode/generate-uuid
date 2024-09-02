@@ -1,34 +1,45 @@
+"""import"""
 import os
-import sys
 import time
-import secrets as hex
+
+OUTPUT = ''
 
 def insert(str1, str2, index):
-  orginal = str1
-  new = str2
-  pos = index
+    "insert text at index"
+    original = str1
+    new = str2
+    pos = index
 
-  global output
-  output = original[:pos] + new + original[pos:]
+    global OUTPUT
+    OUTPUT = original[:pos] + new + original[pos:]
 
-uuid = ''
-next = ''
+def print_in_os(argument):
+    "print in both terminal and action logs"
+    print(argument)
+    os.system(argument)
 
-epoch = format(time.time() * 1000, 'x')
 
-uuid = '0' + epoch + '-'
+print_in_os("echo Version 7")
 
-insert(uuid, '-', 7)
-uuid = output + '7'
+UUID = ''
+ADD = ''
 
-next = hex.token_hex(1.5)
-uuid = uuid + next + '-b'
+EPOCH = round(time.time() * 1000)
+EPOCHMILLI = format(EPOCH, 'x')
 
-next = hex.token_hex(1.5)
-uuid = uuid + next + '-'
+UUID = '0' + EPOCHMILLI + '-'
 
-next = hex.token_hex(6)
-uuid = uuid + next
+insert(UUID, '-', 8)
+UUID = OUTPUT + '7'
 
-print_in_os(f"echo 'uuid={uuid}' >> $GITHUB_OUTPUT")
-print_in_os(f"echo 'safe=safe' >> $GITHUB_OUTPUT")
+ADD = os.urandom(2).hex()[:-1]
+UUID = UUID + ADD + '-'
+
+ADD = os.urandom(2).hex()
+UUID = UUID + ADD + '-'
+
+ADD = os.urandom(6).hex()
+UUID = UUID + ADD
+
+print_in_os(f"echo 'uuid={UUID}' >> $GITHUB_OUTPUT")
+print_in_os("echo 'safe=safe' >> $GITHUB_OUTPUT")

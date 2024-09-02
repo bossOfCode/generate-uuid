@@ -1,6 +1,5 @@
 """Import Operating System and UUID"""
 import os
-import sys
 import uuid
 
 VERSION = os.environ.get("INPUT_VERSION")
@@ -24,7 +23,8 @@ if VERSION in versions or namespace in namespaces:
     OUTPUT = UUIDTYP()
 else:
     if not namespace in namespaces and namespace > "":
-       raise ValueError(f"ERROR: namespace cannot be '{namespace}'; must be either DNS, URL, OID, or X500.")
+        raise ValueError(f"ERROR: namespace cannot be '{namespace}'; must be either DNS, URL, OID, "
+                          + "or X500.")
     else:
         if not VERSION in versions and VERSION > "":
             raise ValueError(f"ERROR: VERSION {VERSION} does not exist")
