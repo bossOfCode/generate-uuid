@@ -6,7 +6,7 @@ Generates a random UUID using the `uuid` module in python.
 
 ## Inputs
 
-* `version` - REQIURED - Version of UUID to generate. Versions are 1, 3, 4, and 5.
+* `version` - REQIURED - Version of UUID to generate. Versions are 1, 3, 4, 5, and 7.
 
 > Note: Version 1 may pose a safety risk because it uses your network info.
 
@@ -29,5 +29,5 @@ Generates a random UUID using the `uuid` module in python.
     python-version: 3.12.5 #any version above 3.9 will do
 - uses: bossOfCode/generate-uuid@v1 #Use current version
   with: 
-    - version: 5 #v1, 3, 4, snd 5 are avaliable
+    - version: 5 #v1, 3, 4, 5, and 7 are avaliable
 ```
