@@ -44,7 +44,7 @@ jobs:
 
     - name: test uuid generator
       id: uuid
-      uses: bossOfCode/generate-uuid@v1.0
+      uses: bossOfCode/generate-uuid@main
       with:
         version: ${{ inputs.version }}
 
